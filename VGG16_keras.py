@@ -71,7 +71,7 @@ def VGG16():
     # 8번째 레이어 : conv3-512
     # input_size = (28, 28, 256)
     conv8 = Conv2D(filters=512, kernel_size=(3, 3), strides=1, padding = 'same')(pool3)
-    conv8 = Activation('relu')(conv3)
+    conv8 = Activation('relu')(conv8)
     # 8번째 레이어 output = (28, 28, 512)
 
 
