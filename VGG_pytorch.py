@@ -51,3 +51,4 @@ class VGG16(nn.Module):
 model = VGG16().to("cuda:0")
 summary(model, input_size=(3, 224, 224))
 
+
