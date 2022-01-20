@@ -1,4 +1,5 @@
-## Reference : https://github.com/1297rohit/VGG16-In-Keras  
+
+## Reference : https://github.com/1297rohit/VGG16-In-Keras ##
 
 import keras
 from keras.models import Sequential
