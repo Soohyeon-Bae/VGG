@@ -1,3 +1,5 @@
+# 1297rohit (2021) [VGG16-in-Keras]. https://github.com/1297rohit/VGG16-In-Keras
+
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPool2D , Flatten
