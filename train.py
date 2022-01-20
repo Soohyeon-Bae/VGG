@@ -1,17 +1,15 @@
-# 1297rohit (2021) [VGG16-in-Keras]. https://github.com/1297rohit/VGG16-In-Keras
-
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPool2D , Flatten
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 
-trdata = ImageDataGenerator()
-traindata = trdata.flow_from_directory(directory="cats_and_dogs_filtered/train",target_size=(224,224))
+trdata = ImageDataGenerator() # 이미지 증강?
+traindata = trdata.flow_from_directory(directory="cats_and_dogs_filtered/train",target_size=(224,224)) # 학습 데이터 가져오기
 tsdata = ImageDataGenerator()
-testdata = tsdata.flow_from_directory(directory="cats_and_dogs_filtered/validation", target_size=(224,224))
+testdata = tsdata.flow_from_directory(directory="cats_and_dogs_filtered/validation", target_size=(224,224)) # 시험 데이터 가져오기
 
-model = Sequential()
+model = Sequential() # vgg16 모델 구현
 model.add(Conv2D(input_shape=(224, 224, 3), filters=64, kernel_size=(3, 3), padding="same", activation="relu"))
 model.add(Conv2D(filters=64, kernel_size=(3, 3), padding="same", activation="relu"))
 model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2)))
